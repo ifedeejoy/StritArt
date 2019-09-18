@@ -1,0 +1,11 @@
+AddOutputFilterByType DEFLATE text/text image/png image/jpg text/html text/plain text/xml text/css application/x-javascript application/javascript
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^expenses/expense/(.*) expense.php?expense=$1 [L,QSA,NC]
+RewriteRule ^index/(.*) index.php$1 [L,QSA,NC]
+RewriteRule ^404/(.*) 404.html$1 [L,QSA,NC]
+RewriteRule ^art-work/(.*) art-work.php$1 [L,QSA,NC]
+RewriteRule ^logout/(.*) logout.php$1 [L,QSA,NC]
+
